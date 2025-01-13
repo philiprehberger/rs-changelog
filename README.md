@@ -3,6 +3,7 @@
 [![CI](https://github.com/philiprehberger/rs-changelog/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/rs-changelog/actions/workflows/ci.yml)
 [![Crates.io](https://img.shields.io/crates/v/philiprehberger-changelog.svg)](https://crates.io/crates/philiprehberger-changelog)
 [![License](https://img.shields.io/github/license/philiprehberger/rs-changelog)](LICENSE)
+[![Sponsor](https://img.shields.io/badge/sponsor-GitHub%20Sponsors-ec6cb9)](https://github.com/sponsors/philiprehberger)
 
 Programmatic CHANGELOG.md parsing, generation, and manipulation following Keep a Changelog format
 
