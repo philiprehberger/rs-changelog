@@ -2,7 +2,11 @@
 
 [![CI](https://github.com/philiprehberger/rs-changelog/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/rs-changelog/actions/workflows/ci.yml)
 [![Crates.io](https://img.shields.io/crates/v/philiprehberger-changelog.svg)](https://crates.io/crates/philiprehberger-changelog)
+[![GitHub release](https://img.shields.io/github/v/release/philiprehberger/rs-changelog)](https://github.com/philiprehberger/rs-changelog/releases)
+[![Last updated](https://img.shields.io/github/last-commit/philiprehberger/rs-changelog)](https://github.com/philiprehberger/rs-changelog/commits/main)
 [![License](https://img.shields.io/github/license/philiprehberger/rs-changelog)](LICENSE)
+[![Bug Reports](https://img.shields.io/github/issues/philiprehberger/rs-changelog/bug)](https://github.com/philiprehberger/rs-changelog/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
+[![Feature Requests](https://img.shields.io/github/issues/philiprehberger/rs-changelog/enhancement)](https://github.com/philiprehberger/rs-changelog/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement)
 [![Sponsor](https://img.shields.io/badge/sponsor-GitHub%20Sponsors-ec6cb9)](https://github.com/sponsors/philiprehberger)
 
 Programmatic CHANGELOG.md parsing, generation, and manipulation following Keep a Changelog format
@@ -11,7 +15,7 @@ Programmatic CHANGELOG.md parsing, generation, and manipulation following Keep a
 
 ```toml
 [dependencies]
-philiprehberger-changelog = "0.1.1"
+philiprehberger-changelog = "0.1.2"
 ```
 
 ## Usage
@@ -78,6 +82,13 @@ cargo test
 cargo clippy -- -D warnings
 ```
 
+## Support
+
+If you find this package useful, consider giving it a star on GitHub — it helps motivate continued maintenance and development.
+
+[![LinkedIn](https://img.shields.io/badge/Philip%20Rehberger-LinkedIn-0A66C2?logo=linkedin)](https://www.linkedin.com/in/philiprehberger)
+[![More packages](https://img.shields.io/badge/more-open%20source%20packages-blue)](https://philiprehberger.com/open-source-packages)
+
 ## License
 
-MIT
+[MIT](LICENSE)
