@@ -10,7 +10,7 @@ Programmatic CHANGELOG.md parsing, generation, and manipulation following Keep a
 
 ```toml
 [dependencies]
-philiprehberger-changelog = "0.1.2"
+philiprehberger-changelog = "0.2.0"
 ```
 
 ## Usage
@@ -46,6 +46,15 @@ if issues.is_empty() {
 }
 ```
 
+### Filter by category
+
+```rust
+let fixed_entries = changelog.filter_by_category(Category::Fixed);
+for entry in &fixed_entries {
+    println!("{}", entry.description);
+}
+```
+
 ### Diff between versions
 
 ```rust
@@ -68,6 +77,7 @@ if let Some(changes) = changelog.diff("0.1.0", "0.2.0") {
 | `.unreleased()` | Get the Unreleased section |
 | `.to_markdown()` | Render back to markdown |
 | `.validate()` | Check format compliance |
+| `.filter_by_category(category)` | Get all entries matching a category across all versions |
 | `.diff(v1, v2)` | Get entries added between versions |
 
 ## Development
