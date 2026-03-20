@@ -2,9 +2,12 @@
 name = "philiprehberger-changelog"
 version = "0.1.0"
 edition = "2021"
+rust-version = "1.70"
 authors = ["Philip Rehberger"]
 description = "Programmatic CHANGELOG.md parsing, generation, and manipulation following Keep a Changelog format"
 license = "MIT"
+readme = "README.md"
 repository = "https://github.com/philiprehberger/rs-changelog"
+documentation = "https://docs.rs/philiprehberger-changelog"
 keywords = ["changelog", "release", "markdown", "versioning", "keep-a-changelog"]
 categories = ["development-tools", "text-processing"]

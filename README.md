@@ -1,12 +1,16 @@
 # rs-changelog
 
-Programmatic CHANGELOG.md parsing, generation, and manipulation following Keep a Changelog format.
+[![CI](https://github.com/philiprehberger/rs-changelog/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/rs-changelog/actions/workflows/ci.yml)
+[![Crates.io](https://img.shields.io/crates/v/philiprehberger-changelog.svg)](https://crates.io/crates/philiprehberger-changelog)
+[![License](https://img.shields.io/github/license/philiprehberger/rs-changelog)](LICENSE)
+
+Programmatic CHANGELOG.md parsing, generation, and manipulation following Keep a Changelog format
 
 ## Installation
 
 ```toml
 [dependencies]
-philiprehberger-changelog = "0.1"
+philiprehberger-changelog = "0.1.0"
 ```
 
 ## Usage
@@ -65,6 +69,13 @@ if let Some(changes) = changelog.diff("0.1.0", "0.2.0") {
 | `.to_markdown()` | Render back to markdown |
 | `.validate()` | Check format compliance |
 | `.diff(v1, v2)` | Get entries added between versions |
+
+## Development
+
+```bash
+cargo test
+cargo clippy -- -D warnings
+```
 
 ## License
 
