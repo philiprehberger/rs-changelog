@@ -10,7 +10,7 @@ Programmatic CHANGELOG.md parsing, generation, and manipulation following Keep a
 
 ```toml
 [dependencies]
-philiprehberger-changelog = "0.1.0"
+philiprehberger-changelog = "0.1.1"
 ```
 
 ## Usage
