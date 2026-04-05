@@ -328,6 +328,15 @@ impl Changelog {
         self.versions.iter().find(|v| v.is_unreleased())
     }
 
+    /// Returns all entries across all versions matching the given category.
+    pub fn filter_by_category(&self, category: Category) -> Vec<&Entry> {
+        self.versions
+            .iter()
+            .flat_map(|v| v.entries.iter())
+            .filter(|e| e.category == category)
+            .collect()
+    }
+
     /// Render the changelog back to well-formatted Markdown.
     ///
     /// Entries are grouped by category in the standard order:
@@ -809,5 +818,25 @@ All notable changes to this project will be documented in this file.
         let changelog = Changelog::parse(SAMPLE_CHANGELOG).unwrap();
         let versions = changelog.versions();
         assert_eq!(versions.len(), 3);
+    }
+
+    #[test]
+    fn test_filter_by_category() {
+        let changelog = Changelog::parse(SAMPLE_CHANGELOG).unwrap();
+
+        let added = changelog.filter_by_category(Category::Added);
+        // Unreleased: "Upcoming feature", 0.2.0: "New widget", 0.1.0: "Initial release"
+        assert_eq!(added.len(), 3);
+        assert_eq!(added[0].description, "Upcoming feature");
+        assert_eq!(added[1].description, "New widget");
+        assert_eq!(added[2].description, "Initial release");
+
+        let fixed = changelog.filter_by_category(Category::Fixed);
+        // 0.2.0: "Crash on startup"
+        assert_eq!(fixed.len(), 1);
+        assert_eq!(fixed[0].description, "Crash on startup");
+
+        let deprecated = changelog.filter_by_category(Category::Deprecated);
+        assert!(deprecated.is_empty());
     }
 }
